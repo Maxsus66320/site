@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Размытый фон */
+.background-blur {
+    position: fixed;
+    inset: 0;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* Общая рамка */
+.frame {
+    display: flex;
+    margin: 25px;
+    height: calc(90vh - 40px);
+    border: 3px solid black;
+    border-radius: 25px;
+    overflow: hidden;
+
+    background: white;   /* Всё НЕпрозрачное */
+}
+
+/* Левая панель */
+.sidebar {
+    width: 220px;
+    border-right: 3px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    background: gray;   /* такой же фон как справа */
+}
+
+/* Меню */
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 12px 0;
+    cursor: pointer;
+    transition: 0.25s;
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+
+/* Новый стиль кнопок */
+.btn {
+    font-size: 17px;
+}
+
+.btn:hover,
+.dropdown:hover {
+    background: #e5e5e5;
+    padding-left: 10px;
+}
+
+/* Подменю */
+.submenu {
+    margin-left: 20px;
+    display: none;
+}
+
+.submenu.open {
+    display: block;
+}
+
+/* Правое окно */
+.content {
+    flex: 1;
+    padding: 30px;
+    background: gray;  /* НЕ прозрачное */
+    box-sizing: border-box;
+
+    /* Добавляем прокрутку */
+    overflow-y: auto;  
+    height: 100%;       
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* iframe растягиваем */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Кнопки под картой */
+.map-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.map-buttons button {
+    padding: 10px 18px;
+    border: 2px solid black;
+    background: #f2f2f2;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-size: 16px;
+}
+
+.map-buttons button:hover {
+    background: #e0e0e0;
+}
+
+#gameCanvas {
+    display: block;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.reset-button {
+    padding: 10px 18px;
+    border: 2px solid black;
+    background: #f2f2f2;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-size: 16px;
+    margin-top: 10px; /* отступ сверху */
+}
+
+.reset-button:hover {
+    background: #e0e0e0;
+}
+
+.formula-card {
+    background: #f9f9f9;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.formula-card h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #222;
+}
+
+.formula-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formula-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.formula-inputs label {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.formula-inputs input {
+    padding: 6px 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+}
+
+.formula-inputs button {
+    padding: 10px 18px;
+    border: 2px solid black;
+    background: #f2f2f2;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-size: 16px;
+    flex: 1 1 100%;
+}
+
+.formula-inputs button:hover {
+    background: #e0e0e0;
+}
+
+.formula-text {
+    background: #eaeaea;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.formula-result {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.formula-explanation {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.formula-explanation ul {
+    padding-left: 20px;
+    margin: 5px 0 0 0;
+}
+
+.formula-explanation li {
+    margin-bottom: 5px;
+}
+
+
+
+

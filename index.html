@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Макет сайта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-blur"></div>
+
+<div class="frame">
+
+    <aside class="sidebar">
+        <ul>
+            <li class="btn" onclick="loadPage('main')">Главная</li>
+
+            <li class="dropdown" id="essayBtn">
+                Эссе
+                <ul class="submenu" id="essayMenu">
+                    <li class="btn" onclick="loadPage('essay1')">Эссе 1</li>
+                    <li class="btn" onclick="loadPage('essay2')">Эссе 2</li>
+                    <li class="btn" onclick="loadPage('essay3')">Эссе 3</li>
+                </ul>
+            </li>
+
+            <li class="btn" onclick="loadFormulaPage()">Формула жизни</li>
+            <li class="btn" onclick="loadMap()">Карта</li>
+            <li class="btn" onclick="loadPage('game')">Игра</li>
+        </ul>
+    </aside>
+
+    <main class="content" id="contentWindow">
+        <h3>Это сайт :></h3>
+        <p>Нажмите кнопки сбоку для навигации по сайту</p>
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="formula.js"></script>
+
+</body>
+</html>
